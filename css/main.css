@@ -1,0 +1,27 @@
+:root{
+    --verde: #7cb342;
+    --colorBoton: #83ac1d;
+    --azul: #007cbf;
+    --azulFooter: #0277bd;
+    --azulOscuro: #01579b;
+    --gris: #e5e5e5;
+    --blanco: #ffffff;
+    --separador: #BDBDBD;
+    --negro: #000000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+}
