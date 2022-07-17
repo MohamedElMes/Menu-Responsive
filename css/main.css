@@ -3,7 +3,7 @@
     --colorBoton: #83ac1d;
     --azul: #007cbf;
     --azulFooter: #0277bd;
-    --azulOscuro: #01579b;
+    --azulOscuro: #01508b;
     --gris: #e5e5e5;
     --blanco: #ffffff;
     --separador: #BDBDBD;
@@ -22,6 +22,74 @@ html{
     box-sizing: inherit;
 }
 
+body{
+    font-family: 'Albert Sans', sans-serif;
+}
 a{
     text-decoration: none;
+}
+
+
+/************************************ NAVIGATION ***********************************/
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 5px 5px;
+    box-shadow: 0px -7px 25px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -7px 25px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -7px 25px 0px rgba(0,0,0,0.75);
+}
+.navigation__logo{
+    width: 60px;
+    height: 60px;
+}
+
+/**** navigation droite ****/
+.navigation__droite{
+    display: flex;
+}
+.navigation__option{
+    margin-right: 1.5rem;
+}
+.navigation__option:hover{
+    border-left: 2px solid var(--verde);
+    border-right: 2px solid var(--verde);
+
+    transition: 1s;
+}
+.navigation__option--lien{
+    font-size: 2rem;
+    color: var(--azul);
+
+    transition: 1s;
+}
+.navigation__option--lien:hover{
+    color: var(--verde);
+
+    transition: 1s;
+}
+
+/******** MEDIA QUERIES ********/
+
+@media(min-width: 768px) {
+    .navigation{
+        display: flex;
+    }
+    .navigation__option{
+        border-left: 2px solid var(--azul);
+        border-right: 2px solid var(--azul);
+
+        padding: .5rem;
+    }
+}
+@media(min-width: 823px) {
+    .navigation__option{
+        margin: 0 2rem 0 2rem;
+        border: none;
+    }
+    .navigation__option:hover{
+        border: none;
+    }
 }
