@@ -150,6 +150,14 @@ a{
 
     transition: .5s;
 }
+
+.séparateur{
+    background-color: var(--grisFoncé);
+    height: 2px;
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
 /******** MEDIA QUERIES ********/
 
 @media(min-width: 768px) {
