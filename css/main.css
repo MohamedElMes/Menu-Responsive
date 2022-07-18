@@ -6,7 +6,7 @@
     --azulOscuro: #01508b;
     --gris: #e5e5e5;
     --blanco: #ffffff;
-    --separador: #BDBDBD;
+    --grisFoncé: #BDBDBD;
     --negro: #000000;
 }
 html{
@@ -48,7 +48,7 @@ a{
 
 /**** navigation droite ****/
 .navigation__droite{
-    display: flex;
+    display: none;
 }
 .navigation__option{
     margin-right: 1.5rem;
@@ -71,6 +71,85 @@ a{
     transition: 1s;
 }
 
+/**** navigation gauche ****/
+
+.navigation__gauche{
+    display: flex;
+}
+/**** hamburger nav ****/
+
+.menu__burger-div{
+    padding:5px;
+}
+.menu__burger{
+    width: 3.5rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--negro);
+    position: relative;
+    margin: 0 1rem;
+
+    transform: translateY(27px);
+}
+.menu__burger::before, .menu__burger::after{
+    content: '';
+    width: 3.5rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--negro);
+    position: absolute;
+}
+.menu__burger::before{
+    transform: translateY(-11px);
+
+    transition: .3s;
+}
+.menu__burger::after{
+    transform: translateY(11px);
+
+    transition: .3s;
+}
+/* hamburger nav animation */
+
+.burger-toggle.menu__burger{
+    background: transparent;
+
+    transition: .3s;
+}
+.burger-toggle.menu__burger::before{
+    transform:rotate(45deg);
+}
+.burger-toggle.menu__burger::after{
+    transform:rotate(-45deg);
+}
+
+/**** menu responsive ****/
+
+.navigation__responsive{
+    background-color: var(--blanco);
+    -webkit-box-shadow: -5px 0px 31px -10px #000000; 
+    box-shadow: -5px 0px 31px -10px #000000;
+    position: absolute;
+    width: 25rem;
+    height: 100vh;
+
+    transform: translateX(-110%);
+    transition: .5s;
+}
+.navigation__option-res{
+    margin-left: 2rem;
+    margin-top: 3rem;
+}
+.navigation__option--lien-res{
+    font-size: 3rem;
+    color: var(--azul);
+}
+
+.menu-toggle.navigation__responsive{
+    transform: translateX(0%);
+
+    transition: .5s;
+}
 /******** MEDIA QUERIES ********/
 
 @media(min-width: 768px) {
@@ -82,6 +161,12 @@ a{
         border-right: 2px solid var(--azul);
 
         padding: .5rem;
+    }
+    .menu__burger{
+        display: none;
+    }
+    .navigation__droite{
+        display: flex;
     }
 }
 @media(min-width: 823px) {
